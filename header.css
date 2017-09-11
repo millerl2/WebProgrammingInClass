@@ -39,7 +39,7 @@ a {
 .menu ul {
     display: none;
     position: absolute;
-    width: 100px;
+    width: 200px;
     background-color: #035C52;
     border: 1px solid #035C52;
     margin-left: -5px;
