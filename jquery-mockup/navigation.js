@@ -9,7 +9,7 @@ $(function(){
 
     $(".btn-primary").click(function(){
         $(this).closest(".col-md-4").css({ 'max-width': 'none'})
-            .animate({ 'flex-basis' : '100%' });
-    });
+            .animate({ 'flex-basis' : '100%' })
+    })
 
 });
