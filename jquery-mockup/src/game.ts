@@ -8,6 +8,10 @@ export class Player {
 
     name: string;
     quotes: Quote[] = [];
+
+    drawQuotes(){
+        $("#my-quotes").html(this.quotes.map(x=> `<li class="list-group-item">${x.text}</li>`).join(""))
+    }
 }
 
 export class Room {
@@ -30,6 +34,7 @@ export class Game {
     ];
     quotes: Quote[] = [
         {text: "Get me out of here!!"},
+        { text: "They're just fine" },
     ];
 }
 
@@ -43,7 +48,10 @@ let i =0;
 room.picture = game.pictures[i];
 room.drawPicture();
 
-$("cmd-flip").click(function(e){
+me.quotes = game.quotes;
+me.drawQuotes();
+
+$("#cmd-flip").click(function(e){
     e.preventDefault();
     i++;
     room.picture = game.pictures[i];
